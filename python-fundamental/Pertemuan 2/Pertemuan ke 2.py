@@ -1,65 +1,76 @@
-#Latihan 1: Fungsi dengan Argumen Default
-def buat_email(nama_pengguna, domain="coding.com"):
-    return f"{nama_pengguna.lower()}@{domain.lower()}"
+Latihan 1
 
-# Contoh pemanggilan
-print(buat_email("Budi"))          # budi@coding.com
-print(buat_email("Ani", "belajar.id"))  # ani@belajar.id
+Ekspresi unar → hanya melibatkan satu operand (contoh: tanda negatif, not).
+Ekspresi biner → melibatkan dua operand (contoh: +, -, *, /).
 
-#Latihan 2: Memanggil dengan Keyword Arguments
-def kirim_paket(barang, tujuan, berat_kg, asuransi=False, express=False):
-    print(f"Mengirim {barang} ke {tujuan}")
-    print(f"Berat: {berat_kg} kg")
-    print(f"Asuransi: {asuransi}")
-    print(f"Express: {express}")
+# Ekspresi unar
+x = -5       # unary minus
+y = not True # unary not
 
-# Panggil dengan keyword arguments
-kirim_paket(barang="Buku", tujuan="Bandung", berat_kg=2, express=True)
+# Ekspresi biner
+z = 7 + 3    # penjumlahan
+k = 10 > 5   # perbandingan
+print(x, y, z, k)
 
-#Latihan 3: Mengembalikan Banyak Nilai
-def analisis_daftar(daftar_angka):
-    total = sum(daftar_angka)
-    jumlah = len(daftar_angka)
-    rata_rata = total / jumlah if jumlah > 0 else 0
-    return total, jumlah, rata_rata
+Latihan 2
 
-# Contoh pemanggilan
-angka = [10, 20, 30, 40, 50]
-total, jumlah, rata_rata = analisis_daftar(angka)
-print("Total:", total)
-print("Jumlah elemen:", jumlah)
-print("Rata-rata:", rata_rata)
+Ekspresi relasional menghasilkan boolean (True atau False).
 
-#Latihan 4: Dokumentasi Profesional (Docstring)
-def analisis_daftar(daftar_angka):
-    """
-    Menganalisis sebuah daftar angka.
+print(10 > 5)          # True
+print(type(10 > 5))    # <class 'bool'>
 
-    Args:
-        daftar_angka (list of int/float): Daftar angka yang ingin dianalisis.
+Latihan 3
 
-    Returns:
-        tuple: Berisi tiga nilai:
-            - total (int/float): Jumlah total semua angka.
-            - jumlah (int): Banyaknya elemen dalam daftar.
-            - rata_rata (float): Nilai rata-rata dari semua angka.
-    """
-    total = sum(daftar_angka)
-    jumlah = len(daftar_angka)
-    rata_rata = total / jumlah if jumlah > 0 else 0
-    return total, jumlah, rata_rata
+Kode:
 
-# Cek docstring
-help(analisis_daftar)
+print((5 + 2) * 3 - (8 / 4))
 
-#Latihan 5: Konversi ke Lambda
-# Fungsi biasa
-def get_luas_lingkaran(radius):
-    return 3.14159 * (radius ** 2)
 
-# Versi lambda
-luas_lingkaran_lambda = lambda radius: 3.14159 * (radius ** 2)
+Urutan operasi (prioritas):
 
-# Uji
-print(get_luas_lingkaran(5))        # Fungsi biasa
-print(luas_lingkaran_lambda(5))     # Fungsi lambda
+(5 + 2) = 7
+
+(8 / 4) = 2.0
+
+7 * 3 = 21
+
+21 - 2.0 = 19.0
+
+👉 Output = 19.0
+
+Latihan 4
+print("Apple" < "Banana")
+
+
+Hasilnya True, karena perbandingan string dilakukan secara leksikografis (urutan alfabet).
+Huruf "A" datang sebelum "B", jadi "Apple" < "Banana" bernilai True.
+
+Latihan 5
+
+Kode salah:
+
+poin = 100
+poin =+ 50   # ini artinya poin = +50, bukan menambah 50
+print(poin)  # hasilnya 50
+
+
+Seharusnya:
+
+poin = 100
+poin += 50   # shorthand untuk poin = poin + 50
+print(poin)  # hasilnya 150
+
+Latihan 6
+
+Hitung total detik dalam satu hari:
+
+print(24 * 60 * 60)  # 86400
+
+Latihan 7
+
+Minta input nama dan tahun lahir, lalu hitung umur di 2025:
+
+nama = input("Masukkan nama: ")
+tahun_lahir = int(input("Masukkan tahun lahir: "))
+umur = 2025 - tahun_lahir
+print(f"Halo {nama}, di tahun 2025 umur kamu sekitar {umur} tahun.")
