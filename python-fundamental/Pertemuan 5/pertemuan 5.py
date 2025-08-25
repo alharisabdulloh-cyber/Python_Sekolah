@@ -1,54 +1,40 @@
-#latihan 1
-s = "Belajar Python itu Menyenangkan"
+# ==========================
+# Latihan 1: Fungsi Sapaan Sederhana
+# ==========================
+def salam_pembuka():
+    print("==============================")
+    print("Selamat Datang di Program Saya!")
+    print("==============================")
 
-# Karakter pertama
-print(s[0])     # B
+# Panggil fungsi beberapa kali
+salam_pembuka()
+salam_pembuka()
+print()  # baris kosong
 
-# Karakter terakhir (pakai indexing negatif)
-print(s[-1])    # n
 
-# Karakter spasi pertama (di indeks 7)
-print(s[7])     # " "
+# ==========================
+# Latihan 2: Fungsi dengan Parameter
+# ==========================
+def info_cuaca(kota, cuaca):
+    print(f"Cuaca di kota {kota} hari ini {cuaca}.")
 
-#latihan 2
-s = "Belajar Python itu Menyenangkan"
+# Contoh pemanggilan
+info_cuaca("Jakarta", "berawan")
+info_cuaca("Bandung", "hujan")
+print()
 
-# "Python"
-print(s[8:14])
 
-# "Menyenangkan"
-print(s[18:])
+# ==========================
+# Latihan 3: Fungsi dengan return
+# ==========================
+def kubik(angka):
+    return angka ** 3
 
-# "Belajar"
-print(s[:7])
+hasil_kubik = kubik(4)
+print("Hasil kubik dari 4 adalah:", hasil_kubik)
+print()
 
-#latihan 3
-# Minta input kata dari user
-kata = input("Masukkan sebuah kata: ")
 
-# Membalik kata dengan slicing
-kata_terbalik = kata[::-1]
-print("Kata terbalik:", kata_terbalik)
-
-# Cek apakah palindrom
-if kata.lower().replace(" ", "") == kata_terbalik.lower().replace(" ", ""):
-    print("Ini adalah palindrom!")
-else:
-    print("Bukan palindrom.")
-
-#latihan 4
-kalimat = "BPrOaGikRtoAdMiItMuINtuGhpPyYcThHoOnN"
-
-# Ambil setiap karakter ke-3
-kode_rahasia = kalimat[::3]
-print("Kode rahasia:", kode_rahasia)
-
-#latihan 5
-nama_salah = "dUDI sANTOSO"
-
-# "dUDI" -> ambil "UDI" lalu jadi "udi", lalu ganti "d" jadi "B"
-# "sANTOSO" -> ambil "ANTOSO" lalu jadi "antoso", lalu ganti "s" jadi "S"
-
-nama_benar = "B" + nama_salah[1:3].lower() + "i" + " " + "S" + nama_salah[6:].lower()
-print(nama_benar)   # Budi Santoso
-
+# ==========================
+# Latihan 4: Kalkulator Diskon
+# =====
