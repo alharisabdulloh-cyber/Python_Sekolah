@@ -1,53 +1,38 @@
-#latihan 1
-# Countdown dari 10 ke 1
-hitung = 10
+# Latihan 1: Perbedaan utama antara operator = dan ==
+# =  : assignment (memberi nilai ke variabel)
+# == : comparison (membandingkan kesetaraan dua nilai)
+print("Latihan 1:")
+x = 5      # menggunakan '=' untuk memberi nilai
+print("Nilai x =", x)
+print("Apakah x == 5?", x == 5)  # menggunakan '==' untuk membandingkan
+print()
 
-while hitung > 0:
-    print(hitung)
-    hitung -= 1
+# Latihan 2: Nama variabel yang TIDAK VALID
+# a) _nama_depan  -> valid
+# b) nilai_rata2  -> valid
+# c) 2x           -> TIDAK VALID (tidak boleh diawali angka)
+# d) namaLengkap  -> valid
+print("Latihan 2:")
+print("Jawaban: c) 2x (tidak valid karena nama variabel tidak boleh diawali angka)")
+print()
 
-print("Blastoff!")
+# Latihan 3: Prediksi output kode
+# angka_favorit = input("Masukkan angka favoritmu: ")
+# hasil = angka_favorit * 2
+# print(hasil)
+# Jika input = 10 (string), maka hasil = "10" * 2 -> "1010"
+print("Latihan 3:")
+print("Jika input = 10, maka output =", "10" * 2)
+print("Jawaban yang benar: b) Program akan menampilkan 1010")
+print()
 
-#latihan 2
-# Game Tebak Angka
-angka_rahasia = 7
-
-while True:
-    tebakan = int(input("Tebak angka (1-10): "))
-
-    if tebakan == angka_rahasia:
-        print("Selamat, tebakan Anda benar!")
-        break
-    else:
-        print("Salah, coba lagi!")
-
-print("Terima kasih sudah bermain!")
-
-#latihan 3
-# Input Angka Cerdas
-total = 0
-count = 0
-
-while True:
-    data = input("Masukkan angka (atau ketik 'done' untuk selesai): ")
-
-    if data.lower() == "done":
-        break
-
-    try:
-        angka = float(data)  # bisa menerima bilangan desimal juga
-        total += angka
-        count += 1
-    except:
-        print("Input tidak valid")
-        continue
-
-if count > 0:
-    rata_rata = total / count
-    print("Total:", total)
-    print("Jumlah angka:", count)
-    print("Rata-rata:", rata_rata)
-else:
-    print("Tidak ada angka yang dimasukkan.")
-
-
+# Latihan 4: Program menghitung luas segitiga
+print("Latihan 4:")
+# Meminta pengguna memasukkan alas segitiga
+alas = float(input("Masukkan alas segitiga: "))
+# Meminta pengguna memasukkan tinggi segitiga
+tinggi = float(input("Masukkan tinggi segitiga: "))
+# Menghitung luas segitiga dengan rumus 0.5 * alas * tinggi
+luas = 0.5 * alas * tinggi
+# Menampilkan hasil ke layar
+print(f"Luas segitiga adalah {luas}")
