@@ -1,54 +1,41 @@
-# proyek_kasir.py
+# Latihan 1: Perbedaan ekspresi unar dan biner
+print("=== Latihan 1 ===")
+x = -5    # ekspresi unar
+y = not True   # ekspresi unar
+z = 7 + 3      # ekspresi biner
+k = 10 > 5     # ekspresi biner
+print(f"Unary contoh: x = {x}, y = {y}")
+print(f"Binary contoh: z = {z}, k = {k}\n")
 
-print("============================================")
-print(" SELAMAT DATANG DI PROGRAM KASIR CERDAS! ")
-print("============================================")
+# Latihan 2: Tipe data ekspresi relasional
+print("=== Latihan 2 ===")
+relasi = (10 > 5)
+print(f"10 > 5 = {relasi}, tipe data: {type(relasi)}\n")
 
-# --- Input Barang 1 ---
-print("\n--- Masukkan Detail Barang 1 ---")
-nama_barang_1 = input("Nama Barang: ")
-harga_1 = float(input("Harga Satuan: Rp 40.000.00"))
-jumlah_1 = int(input("Jumlah: "))
+# Latihan 3: Prediksi output
+print("=== Latihan 3 ===")
+hasil = (5 + 2) * 3 - (8 / 4)
+print(f"(5 + 2) * 3 - (8 / 4) = {hasil}\n")
 
-# --- Input Barang 2 ---
-print("\n--- Masukkan Detail Barang 2 ---")
-nama_barang_2 = input("Nama Barang: ")
-harga_2 = float(input("Harga Satuan: Rp "))
-jumlah_2 = int(input("Jumlah: "))
+# Latihan 4: Perbandingan string
+print("=== Latihan 4 ===")
+print(f'"Apple" < "Banana" = {"Apple" < "Banana"}\n')
 
-print("\nMenghitung total...")
+# Latihan 5: Kesalahan operator +=
+print("=== Latihan 5 ===")
+poin = 100
+# poin =+ 50   # salah
+poin += 50     # benar
+print(f"Hasil poin setelah ditambah 50 = {poin}\n")
 
-# --- Kalkulasi Total ---
-total_1 = harga_1 * jumlah_1
-total_2 = harga_2 * jumlah_2
-subtotal = total_1 + total_2
+# Latihan 6: Hitung total detik dalam 1 hari
+print("=== Latihan 6 ===")
+detik = 24 * 60 * 60
+print(f"Total detik dalam 1 hari = {detik}\n")
 
-# --- Logika Diskon ---
-jumlah_diskon = 0.0
-persen_diskon = 0
-
-if subtotal > 200_000:
-    persen_diskon = 10
-    jumlah_diskon = subtotal * 0.10
-elif subtotal > 100_000:
-    persen_diskon = 5
-    jumlah_diskon = subtotal * 0.05
-
-total_akhir = subtotal - jumlah_diskon
-
-# --- Cetak Struk ---
-print("============================================")
-print(" STRUK PEMBELIAN ANDA")
-print("============================================")
-print("Detail Belanja:")
-print(f"1. {nama_barang_1} ({jumlah_1} x Rp {harga_1}) = Rp {total_1}")
-print(f"2. {nama_barang_2} ({jumlah_2} x Rp {harga_2}) = Rp {total_2}")
-print("--------------------------------------------")
-print(f"Subtotal : Rp {subtotal}")
-print(f"Diskon ({persen_diskon}%) : - Rp {jumlah_diskon}")
-print("--------------------------------------------")
-print(f"Total yang harus dibayar: Rp {total_akhir}")
-print("============================================")
-print(" TERIMA KASIH TELAH BERBELANJA! ")
-print("============================================")
-
+# Latihan 7: Program input nama dan tahun lahir
+print("=== Latihan 7 ===")
+nama = input("Masukkan nama: ")
+tahun_lahir = int(input("Masukkan tahun lahir: "))
+umur = 2025 - tahun_lahir
+print(f"Halo {nama}, di tahun 2025 umur kamu sekitar {umur} tahun.")
